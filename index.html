@@ -2,39 +2,36 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>IDTROCONIS - Comparación Biométrica</title>
+    <title>Portal IDTROCONIS</title>
     <style>
-        body { font-family: Arial, sans-serif; background: #222; color: #eee; text-align: center; }
-        h1 { color: #00ffcc; }
-        .container { margin-top: 40px; }
-        input { margin: 10px; }
-        button { padding: 10px 20px; background: #00ffcc; border: none; cursor: pointer; font-size: 16px; }
-        button:hover { background: #009999; }
-        .result { margin-top: 20px; }
-        img { max-width: 600px; border: 2px solid #00ffcc; margin-top: 10px; }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #2980b9;
+        }
     </style>
 </head>
 <body>
-    <h1>IDTROCONIS - Sistema Web</h1>
-    <div class="container">
-        <form method="POST" enctype="multipart/form-data">
-            <label>Huella de Referencia:</label>
-            <input type="file" name="imgA" accept="image/*"><br>
-            <label>Huella a Verificar:</label>
-            <input type="file" name="imgB" accept="image/*"><br>
-            <button type="submit">Ejecutar Comparación</button>
-        </form>
-
-        {% if error %}
-            <p style="color:red;">{{ error }}</p>
-        {% endif %}
-
-        {% if similarity %}
-            <div class="result">
-                <h2>Similitud (IA): {{ similarity }}</h2>
-                <img src="{{ result_image }}" alt="Resultado">
-            </div>
-        {% endif %}
-    </div>
+    <h1>Bienvenido al Portal IDTROCONIS</h1>
+    <p>Este es el portal principal de la aplicación.</p>
+    <p>Haz clic en el siguiente botón para ir a la sección de comparación de huellas:</p>
+    <a href="/upload">Ir a Comparar Huellas</a>
 </body>
 </html>
+
